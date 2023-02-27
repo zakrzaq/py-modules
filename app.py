@@ -1,11 +1,9 @@
 from modules.greater import greet
-from modules.maths import add, subtract
+from services.test_data import get_data
 
 greet()
 
+data = get_data()
 
-result = add(2, 2)
-print(f"2 + 2 equals {result}")
-
-result2 = subtract(10, 5)
-print(f"10 - 5 equals {result2}")
+if not data.empty:
+    print(data.head())
